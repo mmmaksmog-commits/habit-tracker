@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Привычки</title>
+  <meta name="description" content="Трекер привычек: отметки каждый день, серии, тепловая карта за полгода.">
+  <meta name="theme-color" content="#f6f7f2">
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@500;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header class="top">
+      <div>
+        <p class="top__date" id="today"></p>
+        <h1>Привычки</h1>
+      </div>
+      <div class="ring" id="ring" aria-label="Выполнено сегодня">
+        <svg viewBox="0 0 44 44"><circle cx="22" cy="22" r="19"/><circle class="ring__fill" cx="22" cy="22" r="19" id="ringFill"/></svg>
+        <span id="ringText">0/0</span>
+      </div>
+    </header>
+
+    <nav class="week" id="week" aria-label="Выбор дня"></nav>
+
+    <section class="list" id="list" aria-live="polite"></section>
+
+    <button class="add" id="addBtn">＋ Новая привычка</button>
+
+    <section class="card" id="heatCard">
+      <div class="card__head">
+        <h2>Последние 26 недель</h2>
+        <select id="heatSelect" aria-label="Привычка для карты"></select>
+      </div>
+      <div class="heat" id="heat"></div>
+      <div class="heat-legend"><span>меньше</span><i class="l0"></i><i class="l1"></i><i class="l2"></i><i class="l3"></i><i class="l4"></i><span>больше</span></div>
+    </section>
+  </main>
+
+  <div class="sheet" id="sheet" hidden>
+    <form class="sheet__box" id="form">
+      <h2 id="formTitle">Новая привычка</h2>
+      <label class="field"><span>Название</span><input name="name" required maxlength="40" placeholder="Например, читать 20 минут"></label>
+      <div class="field"><span>Иконка</span><div class="emojis" id="emojis"></div></div>
+      <div class="field"><span>Цвет</span><div class="colors" id="colors"></div></div>
+      <div class="sheet__actions">
+        <button type="button" class="btn btn--danger" id="deleteBtn" hidden>Удалить</button>
+        <button type="button" class="btn" id="cancelBtn">Отмена</button>
+        <button type="submit" class="btn btn--primary">Сохранить</button>
+      </div>
+    </form>
+  </div>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
