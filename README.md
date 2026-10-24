@@ -2,7 +2,7 @@
 
 **Трекер привычек с сериями и тепловой картой.**
 
-### ▶️ [Открыть](https://mmmaksmog-commits.github.io/habit-tracker/)
+### ▶️ [Открыть](https://mysik-portfolio.vercel.app/habit-tracker/)
 
 Работает на телефоне и на ПК, без установки и регистрации.
 
@@ -30,4 +30,4 @@ python3 -m http.server 8000
 
 ---
 
-Часть [портфолио](https://mmmaksmog-commits.github.io/).
+Часть [портфолио](https://mysik-portfolio.vercel.app/).
